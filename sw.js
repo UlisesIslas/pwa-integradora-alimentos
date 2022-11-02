@@ -20,7 +20,9 @@ self.addEventListener('install', (event) => {
             '/index.html',
             '/js/app.js',
             '/sw.js',
-            '/pages/listado-recolecciones.html'
+            '/pages/listado-recolecciones.html',
+            '/pages/detalles-recoleccion.html',
+            '/pages/pendiente-detalles.html'
         ]);
     });
     const inmutableCacheRes = caches.open(INMUTABLE_CACHE_NAME).then((cache) => {
