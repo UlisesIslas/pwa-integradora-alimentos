@@ -25,8 +25,9 @@ async function fetchInfo() {
 
 fetchUrl().then(data => {
     let body = "";
+    console.log(data.data);
     Object.entries(data.data).forEach(([key, value]) => {
-        body += `<li class="list-group-item d-flex justify-content-between align-items-start"><div class="ms-2 me-auto"><div class="fw-bold">${value.alimento}</div>${value.categoria}</div></li>`;
+        body += `<li class="list-group-item d-flex justify-content-between align-items-start"><div class="ms-2 me-auto"><div class="fw-bold">${value.alimento}</div>${value.categoria}<br>${value.comentarios}</div></li>`;
     });
     document.getElementById('alimentos-seleccionados').innerHTML = body;
 })
