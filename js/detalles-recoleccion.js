@@ -33,6 +33,6 @@ fetchUrl().then(data => {
 })
 
 fetchInfo().then(data => {
-    document.getElementById('origen'). innerHTML = `<b>Almacen (Origen): </b>${data.data[0].cadena}`
-    document.getElementById('destino').innerHTML = `<b>Banco (Destino): </b>${data.data[0].banco}`
+    document.getElementById('origen'). innerHTML = `<p class="card-text"><b>Almacen (Origen): </b>${data.data[0].cadena}</p>`
+    document.getElementById('destino').innerHTML = `<p class="card-text"><b>Banco (Destino): </b>${data.data[0].banco}</p>`
 })

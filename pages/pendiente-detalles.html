@@ -7,180 +7,58 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
 
     <title>Selección de Alimentos</title>
 </head>
-<body>
 
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">SGRA</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+                aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/pages/listado-recolecciones.html">Recolecciones</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-md-auto">
+                    <li class="nav-item">
+                        <a target="_blank" rel="noopener" class="nav-link" href="#">Cerrar Sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <div class="col-12 col-md-8 mx-auto">
-        <div class="col-12 sticky-top card">
+        <div class="card border-light mb-3 col-12 sticky-top">
             <div class="card-body">
-                <h3 class="text-center">Selección de Alimentos</h3>
+                <h4 class="text-center">Selección de Alimentos</h4>
             </div>
         </div>
         <div class="col-12">
             <div class="row">
-                <!-- <form id="alimentos-form"> -->
+                <div class="container">
                     <div id="alimentos-lista"></div>
-                    <!-- <div class="card mt-2">
+                </div>
+                <div class="card border-light col-12 mt-3" style="position: sticky; bottom: 5px;">
+                    <div class="row">
                         <div class="card-body">
                             <div class="row">
-                                <div class="col-9 col-md-8 text-truncate">
-                                    Frijoles
+                                <div class="col-6">
+                                    <a href="/pages/listado-recolecciones.html" class="btn btn-danger">Cancelar</a>
                                 </div>
-                                <div class="col-3 col-md-2">
-                                    <input type="checkbox" name="select1" id="select1" class="form-check-input">
+                                <div class="col-6 text-end">
+                                    <button class="btn btn-success" onclick="recolectarAlimentos()">Aceptar</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="card mt-2">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-9 col-md-8 text-truncate">
-                                    Atún
-                                </div>
-                                <div class="col-3 col-md-2">
-                                    <input type="checkbox" name="select2" id="select2" class="form-check-input">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mt-2">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-9 col-md-8 text-truncate">
-                                    Maruchan
-                                </div>
-                                <div class="col-3 col-md-2">
-                                    <input type="checkbox" name="select3" id="select3" class="form-check-input">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mt-2">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-9 col-md-8 text-truncate">
-                                    Chiles enlatados
-                                </div>
-                                <div class="col-3 col-md-2">
-                                    <input type="checkbox" name="select4" id="select4" class="form-check-input">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mt-2">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-9 col-md-8 text-truncate">
-                                    Pan de Ajo
-                                </div>
-                                <div class="col-3 col-md-2">
-                                    <input type="checkbox" name="select5" id="select5" class="form-check-input">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mt-2">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-9 col-md-8 text-truncate">
-                                    Pan Bimbo
-                                </div>
-                                <div class="col-3 col-md-2">
-                                    <input type="checkbox" name="select6" id="select6" class="form-check-input">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mt-2">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-9 col-md-8 text-truncate">
-                                    Platanos
-                                </div>
-                                <div class="col-3 col-md-2">
-                                    <input type="checkbox" name="select7" id="select7" class="form-check-input">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mt-2">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-9 col-md-8 text-truncate">
-                                    Manzanas
-                                </div>
-                                <div class="col-3 col-md-2">
-                                    <input type="checkbox" name="select8" id="select8" class="form-check-input">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mt-2">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-9 col-md-8 text-truncate">
-                                    Jamón
-                                </div>
-                                <div class="col-3 col-md-2">
-                                    <input type="checkbox" name="select9" id="select9" class="form-check-input">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mt-2">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-9 col-md-8 text-truncate">
-                                    Mermelada de Medusa
-                                </div>
-                                <div class="col-3 col-md-2">
-                                    <input type="checkbox" name="select10" id="select10" class="form-check-input">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mt-2">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-9 col-md-8 text-truncate">
-                                    Arroz
-                                </div>
-                                <div class="col-3 col-md-2">
-                                    <input type="checkbox" name="select11" id="select11" class="form-check-input">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card mt-2">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-9 col-md-8 text-truncate">
-                                    Mantequilla
-                                </div>
-                                <div class="col-3 col-md-2">
-                                    <input type="checkbox" name="select12" id="select12" class="form-check-input">
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
-                    <div class="card col-12 mt-3" style="position: sticky; bottom: 5px;">
-                        <div class="row">
-                            <div class="card-body">
-                                <div class="row">
-                                    <div class="col-6">
-                                        <a href="/pages/listado-recolecciones.html" class="btn btn-danger">Cancelar</a>
-                                    </div>
-                                    <div class="col-6 text-end">
-                                        <button class="btn btn-success" onclick="recolectarAlimentos()">Aceptar</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <!-- </form> -->
+                </div>
             </div>
         </div>
     </div>
