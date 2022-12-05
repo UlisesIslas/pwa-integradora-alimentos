@@ -18,6 +18,9 @@ self.addEventListener('install', (event) => {
         return cache.addAll([
             '/',
             '/index.html',
+            '/pages/test.html',
+            '/js/firestore.js',
+            '/js/firestore-functions.js',
             '/js/app.js',
             '/sw.js',
             '/pages/listado-recolecciones.html',
