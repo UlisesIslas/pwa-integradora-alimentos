@@ -18,14 +18,24 @@ getAlimentos().then(data => {
     let i = 0;
     alimentos = data.data;
     Object.entries(data.data).forEach(([key, value]) => {
-        body += `<div class="card mt-2"><div class="card-body"><div class="row"><div class="col-9 text-truncate">${value.nombre}</div><div class="col-3"><input type="checkbox" id="al${i}" name="alimentos" class="form-check-input" value="${value.id}"></div><div class="col-12 mt-2"><textarea placeholder="Observaciones" class="form-control" rows="4" style="resize: none;" id="com${i}"></textarea></div></div></div></div>`
+        body += `<div class="container">
+                    <div class="card mt-2">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-9 text-truncate">${value.nombre}</div>
+                                <div class="col-3"><input type="checkbox" id="al${i}" name="alimentos" class="form-check-input" value="${value.id}"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>`
         i++;
     });
     document.getElementById("alimentos-lista").innerHTML = body;
 });
 
+
 function recolectarAlimentos() {
-    //console.log(alimentos);
+    console.log(alimentos);
     let i = 0;
     let seleccionados = [];
     Object.entries(alimentos).forEach(([key, value]) => {
@@ -35,7 +45,7 @@ function recolectarAlimentos() {
             let fData = new FormData();
             fData.append("recoleccion_id", id);
             fData.append("alimento_id", tmpCB.value);
-            fData.append("comentarios", tmpTA.value);
+            //fData.append("comentarios", tmpTA.value);
             seleccionados.push(fData);
             sendData(fData);
         }
