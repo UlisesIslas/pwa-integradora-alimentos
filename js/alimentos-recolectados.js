@@ -90,10 +90,10 @@ document.getElementById("saveInformation").addEventListener("click",async functi
        
        let resp = await updateObservations(id,comment,image);
         if(resp.message.includes("successfully")){
-            Toast.fire({
+            /* Toast.fire({
                 icon: 'success',
                 title: 'Signed in successfully'
-              })
+              }) */
             
             document.getElementById("closeModal").click()
             image = ""
@@ -101,10 +101,10 @@ document.getElementById("saveInformation").addEventListener("click",async functi
             refreshInfo()
         }
     }else{
-        Toast.fire({
+        /* Toast.fire({
             icon: 'warning',
             title: 'Ingresa todos los datos.'
-          })
+          }) */
     }
     //document.getElementById("closeModal").click();
 })
