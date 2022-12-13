@@ -34,7 +34,7 @@ fetchUrl(GET_RECOLECCIONES_URL).then(data => {
     document.querySelectorAll('.entregar').forEach((x,index) => {
         x.addEventListener('click', async function () {
             console.log(index)
-            window.location.href = `./pages/lista-alimentos-recolectados.html?id=${data.data[index].id}`;
+            window.location.href = `/pwa-integradora-alimentos/pages/lista-alimentos-recolectados.html?id=${data.data[index].id}`;
             
 
             // const response = await fetch(`https://recoleccion-api-production.up.railway.app/api/actualizar-estatus-recoleccion/${x.dataset.id}`, {

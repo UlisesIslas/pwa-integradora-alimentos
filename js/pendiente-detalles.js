@@ -53,7 +53,7 @@ function recolectarAlimentos() {
     });
     if (seleccionados.length > 0) {
         updateStatus().then((res) => {
-            window.location.href = '../pages/listado-recolecciones.html';
+            window.location.href = '/pwa-integradora-alimentos/pages/listado-recolecciones.html';
         });
     } else {
         console.log("Selecciona uno");

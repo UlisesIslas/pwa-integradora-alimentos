@@ -142,7 +142,7 @@ document.getElementById("btnFinish").addEventListener("click", async function(){
                                             </div>
                                         </div></div>` : value.status === 2 ? `<span class="badge rounded-pill bg-info">En camino</span></div><div class="col-3 col-md-2"><button data-id="${value.id}" class="btn btn-primary btn-sm entregar">Entregado</button></div></div></div></div>` : STATUS_THREE_BADGE}`
                     });
-                    window.location.href = `../pages/listado-recolecciones.html`;
+                    window.location.href = `/pwa-integradora-alimentos/pages/listado-recolecciones.html`;
 
                     // document.querySelectorAll('.entregar').forEach(x => {
                     //     x.addEventListener('click', async function () {
