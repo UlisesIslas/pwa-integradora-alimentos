@@ -73,7 +73,7 @@ async function sendData(data) {
 }
 
 async function updateStatus() {
-    const response = await fetch(`https://recoleccion-api-production.up.railway.app/api/actualizar-estatus-recoleccion/${id}`, {
+    const response = await fetch(`https://recoleccion-api-production.up.railway.app/api/estatus-recoleccion2/${id}`, {
         method: "GET",
         headers: {
             Accept: 'application/json',
