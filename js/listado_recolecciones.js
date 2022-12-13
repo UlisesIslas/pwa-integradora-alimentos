@@ -1,5 +1,5 @@
 const GET_RECOLECCIONES_URL = 'https://recoleccion-api-production.up.railway.app/api/recolecciones-usuario';
-const STATUS_THREE_BADGE = `<span class="badge bg-success">Realizada</span></div><div class="col-3 col-md-2"><a href="./pages/detalles-recoleccion.html" class="btn btn-secondary btn-sm">Detalles</a></div></div></div></div>`
+const STATUS_THREE_BADGE = `<span class="badge bg-success">Realizada</span></div><div class="col-3 col-md-2"><a href="../pages/detalles-recoleccion.html" class="btn btn-secondary btn-sm">Detalles</a></div></div></div></div>`
 async function fetchUrl(url) {
     const response = await fetch(url, {
         headers: {
