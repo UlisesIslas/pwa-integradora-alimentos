@@ -13,7 +13,7 @@ async function fetchUrl(data) {
 
 activeSesion = () => {
     if (localStorage.getItem('TOKEN')) {
-        window.location.href = '/pages/listado-recolecciones.html';
+        window.location.href = './pages/listado-recolecciones.html';
     } 
 }
 
@@ -26,7 +26,7 @@ login = () => {
     if (email !== '' && password !== '') {
         fetchUrl(fData).then(data => {
             localStorage.setItem('TOKEN', data.access_token);
-            window.location.href = '/pages/listado-recolecciones.html';
+            window.location.href = './pages/listado-recolecciones.html';
         })
     }
 }
