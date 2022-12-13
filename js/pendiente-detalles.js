@@ -1,5 +1,5 @@
 async function getAlimentos() {
-    const response = await fetch(`http://localhost:8000/api/almacen/alimentos/${new URLSearchParams(window.location.search).get('alm')}`, {
+    const response = await fetch(`https://recoleccion-api-production.up.railway.app/api/almacen/alimentos/${new URLSearchParams(window.location.search).get('alm')}`, {
         headers: {
             Accept: 'application/json'
         },
@@ -62,7 +62,7 @@ function recolectarAlimentos() {
 }
 
 async function sendData(data) {
-    const response = await fetch('http://localhost:8000/api/recoleccion_alimentos/store', {
+    const response = await fetch('https://recoleccion-api-production.up.railway.app/api/recoleccion_alimentos/store', {
         method: "POST",
         headers: { Accept: 'application/json' },
         body: data
@@ -73,7 +73,7 @@ async function sendData(data) {
 }
 
 async function updateStatus() {
-    const response = await fetch(`http://localhost:8000/api/actualizar-estatus-recoleccion/${id}`, {
+    const response = await fetch(`https://recoleccion-api-production.up.railway.app/api/actualizar-estatus-recoleccion/${id}`, {
         method: "GET",
         headers: {
             Accept: 'application/json',

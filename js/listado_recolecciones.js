@@ -1,4 +1,4 @@
-const GET_RECOLECCIONES_URL = 'http://localhost:8000/api/recolecciones-usuario';
+const GET_RECOLECCIONES_URL = 'https://recoleccion-api-production.up.railway.app/api/recolecciones-usuario';
 const STATUS_THREE_BADGE = `<span class="badge bg-success">Realizada</span></div><div class="col-3 col-md-2"><a href="/pages/detalles-recoleccion.html" class="btn btn-secondary btn-sm">Detalles</a></div></div></div></div>`
 async function fetchUrl(url) {
     const response = await fetch(url, {
@@ -37,7 +37,7 @@ fetchUrl(GET_RECOLECCIONES_URL).then(data => {
             window.location.href = `/pages/lista-alimentos-recolectados.html?id=${data.data[index].id}`;
             
 
-            // const response = await fetch(`http://localhost:8000/api/actualizar-estatus-recoleccion/${x.dataset.id}`, {
+            // const response = await fetch(`https://recoleccion-api-production.up.railway.app/api/actualizar-estatus-recoleccion/${x.dataset.id}`, {
             //     method: "GET",
             //     headers: {
             //         Accept: 'application/json',
@@ -65,7 +65,7 @@ fetchUrl(GET_RECOLECCIONES_URL).then(data => {
 
             //         // document.querySelectorAll('.entregar').forEach(x => {
             //         //     x.addEventListener('click', async function () {
-            //         //         const response = await fetch(`http://localhost:8000/api/actualizar-estatus-recoleccion/${x.dataset.id}`, {
+            //         //         const response = await fetch(`https://recoleccion-api-production.up.railway.app/api/actualizar-estatus-recoleccion/${x.dataset.id}`, {
             //         //             method: "GET",
             //         //             headers: {
             //         //                 Accept: 'application/json',

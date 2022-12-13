@@ -5,7 +5,7 @@
 
 function refreshInfo(){
     async function fetchUrl() {
-        const response = await fetch(`http://localhost:8000/api/recolectados/${new URLSearchParams(window.location.search).get('id')}`, {
+        const response = await fetch(`https://recoleccion-api-production.up.railway.app/api/recolectados/${new URLSearchParams(window.location.search).get('id')}`, {
             headers: { 
                 Accept: 'application/json',
                 Authorization: `Bearer ${localStorage.getItem('TOKEN')}`
@@ -46,7 +46,7 @@ function refreshInfo(){
     })
 }
 const STATUS_THREE_BADGE = `<span class="badge bg-success">Realizada</span></div><div class="col-3 col-md-2"><a href="/pages/detalles-recoleccion.html" class="btn btn-secondary btn-sm">Detalles</a></div></div></div></div>`
-const GET_RECOLECCIONES_URL = 'http://localhost:8000/api/recolecciones-usuario';
+const GET_RECOLECCIONES_URL = 'https://recoleccion-api-production.up.railway.app/api/recolecciones-usuario';
 async function fetchUrl(url) {
     const response = await fetch(url, {
         headers: {
@@ -118,7 +118,7 @@ document.getElementById("btnX").addEventListener("click", function(){
 })
 
 document.getElementById("btnFinish").addEventListener("click", async function(){
-         const response = await fetch(`http://localhost:8000/api/actualizar-estatus-recoleccion/${new URLSearchParams(window.location.search).get('id')}`, {
+         const response = await fetch(`https://recoleccion-api-production.up.railway.app/api/actualizar-estatus-recoleccion/${new URLSearchParams(window.location.search).get('id')}`, {
                 method: "GET",
                 headers: {
                     Accept: 'application/json',
@@ -146,7 +146,7 @@ document.getElementById("btnFinish").addEventListener("click", async function(){
 
                     // document.querySelectorAll('.entregar').forEach(x => {
                     //     x.addEventListener('click', async function () {
-                    //         const response = await fetch(`http://localhost:8000/api/actualizar-estatus-recoleccion/${x.dataset.id}`, {
+                    //         const response = await fetch(`https://recoleccion-api-production.up.railway.app/api/actualizar-estatus-recoleccion/${x.dataset.id}`, {
                     //             method: "GET",
                     //             headers: {
                     //                 Accept: 'application/json',
@@ -181,7 +181,7 @@ async function updateObservations(id,comment,image) {
         "foto":image
     }
     console.log(object)
-    const response = await fetch(`http://localhost:8000/api/recoleccion_alimentos/update/${id}`, {
+    const response = await fetch(`https://recoleccion-api-production.up.railway.app/api/recoleccion_alimentos/update/${id}`, {
         method:'PUT',
         headers: {
             Accept: 'application/json',

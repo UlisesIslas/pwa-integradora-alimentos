@@ -4,7 +4,7 @@
 
 function refreshInfo(){
     async function fetchUrl() {
-        const response = await fetch(`http://localhost:8000/api/recolectados/${new URLSearchParams(window.location.search).get('rec')}`, {
+        const response = await fetch(`https://recoleccion-api-production.up.railway.app/api/recolectados/${new URLSearchParams(window.location.search).get('rec')}`, {
             headers: { 
                 Accept: 'application/json',
                 Authorization: `Bearer ${localStorage.getItem('TOKEN')}`

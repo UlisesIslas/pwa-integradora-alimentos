@@ -1,5 +1,5 @@
 const db = new PouchDB("recolecciones");
-const serverApi = 'http://localhost:8000/api/recoleccion_alimentos/store';
+const serverApi = 'https://recoleccion-api-production.up.railway.app/api/recoleccion_alimentos/store';
 
 function saveRecolection(recolection) {
     recolection._id = new Date().toISOString();

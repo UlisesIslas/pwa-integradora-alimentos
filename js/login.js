@@ -1,4 +1,4 @@
-const LOGIN_URL = 'http://localhost:8000/api/login';
+const LOGIN_URL = 'https://recoleccion-api-production.up.railway.app/api/login';
 async function fetchUrl(data) {
     const response = await fetch(LOGIN_URL, {
         method: "POST",
