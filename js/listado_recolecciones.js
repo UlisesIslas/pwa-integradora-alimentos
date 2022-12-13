@@ -21,12 +21,12 @@ fetchUrl(GET_RECOLECCIONES_URL).then(data => {
                         <div class="row">
                             <div class="col-6 col-md-8 text-truncate" id="cc${value.id}">${value.nombre}</div>
                             <div class="col-3 col-md-2">${value.status === 1 ? `<span class="badge rounded-pill bg-warning">Pendiente</span></div>
-                            <div class="col-3 col-md-2"><a href="./pages/pendiente-detalles.html?alm=${value.almacen}&rec=${value.id}" class="btn btn-info btn-sm">Recolectar</a></div>
+                            <div class="col-3 col-md-2"><a href="./pendiente-detalles.html?alm=${value.almacen}&rec=${value.id}" class="btn btn-info btn-sm">Recolectar</a></div>
                             </div></div></div>` : value.status === 2 ? `<span class="badge rounded-pill bg-info">En camino</span></div>
                             <div class="col-3 col-md-2"><button data-id="${value.id}" class="btn btn-primary btn-sm entregar">Entregado</button></div>
                         </div>
                     </div>
-                </div>` : `<span class="badge rounded-pill bg-success">Realizada</span></div><div class="col-3 col-md-2"><a href="./pages/detalles-recoleccion.html?rec=${value.id}" class="btn btn-secondary btn-sm">Detalles</a></div></div></div></div>`}`
+                </div>` : `<span class="badge rounded-pill bg-success">Realizada</span></div><div class="col-3 col-md-2"><a href="./detalles-recoleccion.html?rec=${value.id}" class="btn btn-secondary btn-sm">Detalles</a></div></div></div></div>`}`
     });
 
     document.getElementById('listado').innerHTML = body;
@@ -57,7 +57,7 @@ fetchUrl(GET_RECOLECCIONES_URL).then(data => {
             //                             <div class="row">
             //                                 <div class="col-6 col-md-8 text-truncate" id="cc${value.id}">${value.nombre}</div>
             //                                     <div class="col-3 col-md-2">${value.status === 1 ? `<span class="badge rounded-pill bg-warning">Pendiente</span></div>
-            //                                     <div class="col-3 col-md-2"><a href="./pages/pendiente-detalles.html?alm=${value.almacen}&rec=${value.id}" class="btn btn-info btn-sm">Recolectar</a></div>
+            //                                     <div class="col-3 col-md-2"><a href="./pendiente-detalles.html?alm=${value.almacen}&rec=${value.id}" class="btn btn-info btn-sm">Recolectar</a></div>
             //                                 </div>
             //                             </div></div>` : value.status === 2 ? `<span class="badge rounded-pill bg-info">En camino</span></div><div class="col-3 col-md-2"><button data-id="${value.id}" class="btn btn-primary btn-sm entregar">Entregado</button></div></div></div></div>` : STATUS_THREE_BADGE}`
             //         });
