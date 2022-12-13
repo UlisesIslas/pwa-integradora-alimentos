@@ -18,24 +18,24 @@ self.addEventListener('install', (event) => {
     console.log("SW: Instalado :D");
     const respCache = caches.open(STATIC_CACHE_NAME).then((cache) => {
         return cache.addAll([
-            '/',
-            '/index.html',
-            '/sw.js',
-            '/js/alimentos-recolectados.js',
-            '/js/app.js',
-            '/js/camera.js',
-            '/js/detalles-recoleccion.js',
-            '/js/fontawesome.min.js',
-            '/js/listado_recolecciones.js',
-            '/js/login.js',
-            '/js/pendiente-detalles.js',
-            '/js/sw-db.js',
-            '/pages/detalles-recoleccion.html',
-            '/pages/lista-alimentos-recolectados.html',
-            '/pages/listado-recolecciones.html',
-            '/pages/pendiente-detalles.html',
-            '/css/bootstrap.min.css',
-            '/css/fontawesome.min.css'
+            './',
+            './index.html',
+            './sw.js',
+            './js/alimentos-recolectados.js',
+            './js/app.js',
+            './js/camera.js',
+            './js/detalles-recoleccion.js',
+            './js/fontawesome.min.js',
+            './js/listado_recolecciones.js',
+            './js/login.js',
+            './js/pendiente-detalles.js',
+            './js/sw-db.js',
+            './pages/detalles-recoleccion.html',
+            './pages/lista-alimentos-recolectados.html',
+            './pages/listado-recolecciones.html',
+            './pages/pendiente-detalles.html',
+            './css/bootstrap.min.css',
+            './css/fontawesome.min.css'
         ]);
     });
     const inmutableCacheRes = caches.open(INMUTABLE_CACHE_NAME).then((cache) => {
