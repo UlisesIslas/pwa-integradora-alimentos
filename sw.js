@@ -49,7 +49,7 @@ self.addEventListener('install', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-    if (event.request.clone().method == "PUT") {
+    /*if (event.request.clone().method == "PUT") {
         const RESP = fetch(event.request.clone()).then((respWeb) => {
             return respWeb;
         }).catch(() => {
@@ -63,7 +63,7 @@ self.addEventListener('fetch', (event) => {
             }
         });
         event.respondWith(RESP);
-    } else {
+    } else {*/
         const RESP = fetch(event.request).then((respWeb) => {
             if (!respWeb) {
                 return caches.match(event.request);
@@ -77,7 +77,7 @@ self.addEventListener('fetch', (event) => {
             return caches.match(event.request);
         });
         event.respondWith(RESP);
-    }
+    //
 });
 
 self.addEventListener('sync', (event) => {
