@@ -64,7 +64,8 @@ self.addEventListener('fetch', (event) => {
         });
         event.respondWith(RESP);
     } else {*/
-        const RESP = fetch(event.request).then((respWeb) => {
+    if (event.request.clone().method) != "PUT" || event.request.clone().method != "POST") {
+    const RESP = fetch(event.request).then((respWeb) => {
             if (!respWeb) {
                 return caches.match(event.request);
             }
@@ -76,6 +77,10 @@ self.addEventListener('fetch', (event) => {
         }).catch(() => {
             return caches.match(event.request);
         });
+    } else {
+        return null;
+    }
+        
         event.respondWith(RESP);
     //
 });
