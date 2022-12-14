@@ -49,7 +49,7 @@ self.addEventListener('install', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-    if ((event.request.clone().method == "POST" || event.request.clone().method == "PUT") && (event.request.url.includes("recoleccion_alimentos/store") /* || event.request.url.includes("actualizar-estatus-recoleccion") */)) {
+    if ((event.request.clone().method == "POST" || event.request.clone().method == "PUT") && (event.request.url.includes("recoleccion_alimentos/update") /* || event.request.url.includes("actualizar-estatus-recoleccion") */)) {
         const RESP = fetch(event.request.clone()).then((respWeb) => {
             return respWeb;
         }).catch(() => {
