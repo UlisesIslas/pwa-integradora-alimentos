@@ -64,7 +64,7 @@ self.addEventListener('fetch', (event) => {
         });
         event.respondWith(RESP);
     } else {*/
-    if (event.request.clone().method) != "PUT" || event.request.clone().method != "POST") {
+    if (event.request.clone().method != "PUT" || event.request.clone().method != "POST") {
     const RESP = fetch(event.request).then((respWeb) => {
             if (!respWeb) {
                 return caches.match(event.request);
